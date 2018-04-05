@@ -72,8 +72,9 @@ export default class GetAllPins extends Component {
     render() {
         return (
             <div className="ui container" style={{display:'flex',justifyContent:'space-around'}}>
-            {this.renderListItems()}
             <br /><br />
+            {this.renderListItems()}
+            
             </div>
         )
     }

@@ -1,7 +1,6 @@
 import React,{Component} from "react";
 import ReactDOM from  "react-dom";
 import { Link } from 'react-router';
-import Login from "../../ui/Login"
 
 export default class App extends Component{
     constructor(props){
@@ -33,7 +32,6 @@ export default class App extends Component{
         <div>
             <h1>hello</h1>
             <Link to="/login" className="ui primary basic button">GO to Login Page</Link>
-            <Login />   
         </div>)
     }
 }
