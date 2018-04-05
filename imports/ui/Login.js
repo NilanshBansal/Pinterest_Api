@@ -36,7 +36,8 @@ export default class Login extends Component{
             <button className="ui positive basic button" onClick={this.login}>Login</button>
             <button className="ui negative basic button" onClick={this.logout}>Logout</button>       
             <Link to = "/user_details" className="ui secondary basic button">User Details</Link>   
-            <Link to = "/get_all_pins" className="ui secondary basic button">Get All Pins</Link>   
+            <Link to = "/get_all_pins" className="ui secondary basic button">Get All Pins</Link> 
+            <Link to="/other_user_details" className="ui positive basic button">Get Other User Details</Link>  
         </div>
         )
     }

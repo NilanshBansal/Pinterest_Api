@@ -19,6 +19,15 @@ Meteor.methods({
         let res = HTTP.call("get", apiURL);
         console.log("result : ", res);
         return res;
+    },
+    "get_other_user_details"(token,searchQuery){
+        let baseURL = "https://api.pinterest.com/v1/";
+        let path = `users/${searchQuery}/`;
+        let fields="first_name,id,last_name,url,account_type,bio,counts,username,created_at,image";
+        let apiURL = `${baseURL}${path}?access_token=${token}&fields=${fields}`;
+        let res = HTTP.call("get", apiURL);
+        console.log("result : ", res);
+        return res;        
     }
 })
 
