@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Session } from "meteor/session";
-
+import { Link } from 'react-router';
 export default class OtherUserDetails extends Component {
     constructor(props) {
         super(props);
@@ -25,6 +25,7 @@ export default class OtherUserDetails extends Component {
     render() {
         return (
             <div className="ui container">
+                <Link to="/login" className="ui primary basic button">GO Back</Link>
             <div className="ui icon input">
                 <input type="text" onChange={this.onChangeUsername} placeholder="Enter UserName" />
                     <i className="circular search link icon" onClick={this.search}></i>

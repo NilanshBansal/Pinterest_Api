@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Session } from "meteor/session";
+import { Link } from 'react-router';
 export default class UserDetails extends Component {
     constructor(props) {
         super(props);
@@ -21,6 +22,9 @@ export default class UserDetails extends Component {
     }
     render() {
         return (
+            <div className="ui container">
+            <Link to="/login" className="ui primary basic button">GO Back</Link>
+
             <div className="ui centered card" style={{width:'580px'}}>
                 <div className="image">
                     <img src= {this.state.data.image["60x60"].url} style={{height:'295px'}}/>
@@ -55,6 +59,7 @@ export default class UserDetails extends Component {
                         <i className="user icon"></i>
                         <emp>ID: </emp>{this.state.data.id}
                 </div>
+            </div>
             </div>
         )
     }

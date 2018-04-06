@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from 'react-router';
 export default class GetAllPins extends Component {
     constructor(props) {
         super(props);
@@ -71,10 +71,13 @@ export default class GetAllPins extends Component {
 
     render() {
         return (
+            <div className="ui container">
+            <Link to="/login" className="ui primary basic button">GO Back</Link>
             <div className="ui container" style={{display:'flex',justifyContent:'space-around'}}>
             <br /><br />
             {this.renderListItems()}
             
+            </div>
             </div>
         )
     }
